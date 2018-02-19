@@ -1,0 +1,75 @@
+<!-- Footer -->
+<div id="footer-wrapper">
+    <section id="footer" class="container">
+        <div class="row">
+            {{ partial "footer/recentposts.html" . }}
+            <div class="4u 12u(mobile)">
+                <section>
+                    <header>
+                        <h2>{{ .Site.Params.Footer.title2 }}</h2>
+                    </header>
+                    <a href="{{ .Site.Params.Footer.imagelink2 }}" class="image featured"><img src="{{ .Site.BaseURL }}{{ .Site.Params.Footer.imageurl2 }}" alt="" /></a>
+                    <p>
+                        {{ .Site.Params.Footer.description2 }}
+                    </p>
+                    <footer>
+                        <a href="{{ .Site.Params.Footer.buttonlink2 }}" class="button">{{ .Site.Params.Footer.buttontext2 }}</a>
+                    </footer>
+                </section>
+            </div>
+        </div>
+        <div id="contact" class="row">
+            <div class="4u 12u(mobile)">
+                <section>
+                    <header>
+                        <h2>{{ .Site.Params.Footer.title3 }}</h2>
+                    </header>
+                    <ul class="divided">
+                        {{ range .Site.Data.footerlinks.left.links }}
+                        <li><a href="{{ .url }}">{{ .text }}</a></li>
+                        {{ end }}
+                    </ul>
+                </section>
+            </div>
+            <div class="4u 12u(mobile)">
+                <section>
+                    <header>
+                        <h2>{{ .Site.Params.Footer.title4 }}</h2>
+                    </header>
+                    <ul class="divided">
+                        {{ range .Site.Data.footerlinks.right.links }}
+                        <li><a href="{{ .url }}">{{ .text }}</a></li>
+                        {{ end }}
+                    </ul>
+                </section>
+            </div>
+            <div class="4u 12u(mobile)">
+                <section>
+                    <header>
+                        <h2>{{ .Site.Params.Footer.title5 }}</h2>
+                    </header>
+                    {{ partial "footer/social.html" . }}
+                    <!-- <ul class="contact">
+                        <li>
+                            <h3>Address</h3>
+                            <p>
+                                {{ .Site.Params.Address.line1 }}<br />
+                                {{ .Site.Params.Address.line2 }}<br />
+                                {{ .Site.Params.Address.line3 }}
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Mail</h3>
+                            <p><a href="mailto:{{ .Site.Params.Contact.email }}">{{ .Site.Params.Contact.email }}</a></p>
+                        </li>
+                        <li>
+                            <h3>Phone</h3>
+                            <p>{{ .Site.Params.Contact.phone }}</p>
+                        </li>
+                    </ul> -->
+                </section>
+            </div>
+        </div>
+        {{ partial "footer/copyright.html" . }}
+    </section>
+</div>
