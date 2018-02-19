@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Boarding End to End 2018"
-baseURL = "http://localhost:1313/"
+baseURL = "https://elated-poincare-aaab01.netlify.com//"
 theme = "dopetrope"
 
 [params]
